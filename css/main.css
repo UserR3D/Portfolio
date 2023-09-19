@@ -1,0 +1,82 @@
+.main-class {
+  margin-top: 100px;
+  max-width: 900px;
+  border-radius: 15px;
+  background-color: #352732;
+  color: #caddf2;
+  padding: 70px;
+  font-size: 20px;
+  font-family: "Dm sans", sans-serif;
+}
+
+.main-class h1 {
+  margin-top: 24px;
+}
+
+.main-class h4::before {
+  content: "</ ";
+  color: #0f64e2;
+}
+
+.main-class h4::after {
+  content: " >";
+  color: #0f64e2;
+}
+
+.main-class p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.main-class a {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Dm mono", sans-serif;
+  padding: 15px 70px;
+  background-color: #94bae5;
+  color: #0c0b0b;
+  border-radius: 5px;
+  float: right;
+}
+
+.main-class img {
+  width: 250px;
+  justify-self: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.contato {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background-color: #191414;
+  width: 120px;
+  height: 700px;
+}
+
+.contato h3 {
+  color: #a0c3ee;
+  transform: rotate(90deg);
+  font-size: 64px;
+  font-family: "Dm mono", sans-serif;
+}
+
+.rede-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rede-sociais img {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
