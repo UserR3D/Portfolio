@@ -1,0 +1,30 @@
+.header {
+  margin-top: 150px;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: #191414;
+  color: #b5d1f2;
+  font-size: 24px;
+  font-family: "Ubuntu", "DM Sans", sans-serif;
+  font-weight: 500;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.header li::after {
+  content: "";
+  margin-top: 4px;
+  display: block;
+  width: 0%;
+  height: 4px;
+  background-color: #fff;
+}
+
+.header li:hover::after {
+  width: 100%;
+  transition: width, 0.3s;
+}
