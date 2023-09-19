@@ -1,5 +1,5 @@
 .main-class {
-  margin-top: 100px;
+  margin-top: 20px;
   max-width: 900px;
   border-radius: 15px;
   background-color: #352732;
@@ -9,23 +9,53 @@
   font-family: "Dm sans", sans-serif;
 }
 
+.developer {
+  width: 350px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  margin-top: 10px;
+  position: absolute;
+  left: 0;
+  background: #c2adbe;
+  width: 150px;
+  height: 4px;
+  animation: anima 3s linear infinite;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  right: 380px;
+  background: #c2adbe;
+  width: 150px;
+  height: 4px;
+}
+
+@keyframes anima {
+  from {
+    left: 0;
+  }
+  to {
+    left: 380px;
+  }
+}
+
+.developer h3 span {
+  color: #2182dd;
+}
+
 .main-class h1 {
   margin-top: 24px;
-}
-
-.main-class h3::before {
-  content: "</ ";
-  color: #0f64e2;
-}
-
-.main-class h3::after {
-  content: " >";
-  color: #0f64e2;
 }
 
 .main-class p {
   margin-top: 30px;
   margin-bottom: 50px;
+  line-height: 1.9rem;
 }
 
 .main-class a {
@@ -78,5 +108,14 @@
 .rede-sociais img {
   width: 50px;
   height: 50px;
-  margin: 0 auto;
+  margin: 00%o;
+}
+
+@keyframes moveInfinite {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
 }
