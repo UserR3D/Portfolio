@@ -13,12 +13,12 @@
   margin-top: 24px;
 }
 
-.main-class h4::before {
+.main-class h3::before {
   content: "</ ";
   color: #0f64e2;
 }
 
-.main-class h4::after {
+.main-class h3::after {
   content: " >";
   color: #0f64e2;
 }
