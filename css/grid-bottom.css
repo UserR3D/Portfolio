@@ -1,9 +1,11 @@
 .grid-bottom {
   display: flex;
+  justify-content: center;
   position: relative;
 }
 
 .placeholder {
+  max-height: 600px;
   position: relative;
   background-color: #302633;
   padding: 50px;
@@ -44,44 +46,56 @@
 
 .lab {
   text-align: center;
+  overflow-y: auto;
 }
 
 .lab ul {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 20px;
 }
 
 .box {
   margin-top: 40px;
   background-color: #1d1817;
-  border-radius: 3px;
-  padding: 10px;
-}
-
-.box p {
-  color: #caddf2;
+  border: 6px double #fff;
+  border-radius: 8px;
+  padding: 20px 15px;
+  width: 30ch;
+  max-width: 270px;
+  max-height: 200px;
 }
 
 .box h3 {
+  font-family: "Dm mono", sans-serif, Arial;
   margin-bottom: 8px;
   color: #e8f3ff;
 }
 
+.box p {
+  font-family: "Ubuntu";
+  color: #caddf2;
+}
+
 .box ul {
-  margin: 15px 0;
+  margin: 20px 0;
   display: flex;
   align-items: center;
 }
 
 .box li {
   border: 2px solid #41dd87;
+  background-color: #37664c;
   padding: 5px;
+  transition: 0.6s;
+}
+
+.box li:hover {
+  background-color: #51946f;
 }
 
 .box a {
-  margin-top: 20px;
+  margin-top: 50px;
   color: #e8f3ff;
   background-color: #3c2244;
   padding: 5px 20px;

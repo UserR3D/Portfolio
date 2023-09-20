@@ -27,6 +27,7 @@ function clickButton(event) {
       break;
     case "Sobre":
       handleDetail(document.querySelector(".main-class"));
+      handleDetail(document.querySelector(".name"));
       break;
     case "Contato":
       handleDetail(document.querySelector(".contato"));
