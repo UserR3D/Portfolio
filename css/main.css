@@ -13,17 +13,19 @@
 }
 
 .main-class::before {
-  box-sizing: border-box;
   content: "";
+  display: block;
+  box-sizing: border-box;
   position: absolute;
+  transition: 0.5s;
+  opacity: 0;
   top: 0;
   left: 0;
-  display: block;
-  opacity: 0;
   width: 100%;
   height: 100%;
   border: 20px solid #bb3827;
   border-radius: 15px;
+  z-index: -1;
 }
 
 .main-class.detail::before {
@@ -70,18 +72,15 @@
 }
 
 .name {
-  width: 200px;
+  margin-top: 15px;
+  width: 300px;
 }
 
-.main-class .name {
-  margin-top: 24px;
-}
-
-.main-class .name.detail {
+.name.detail {
   font-weight: bold;
 }
 
-.main-class .name::after {
+.name::after {
   margin-top: 10px;
   content: "";
   display: block;
@@ -90,7 +89,7 @@
   background-color: #af3036;
 }
 
-.main-class .name.detail::after {
+.name.detail::after {
   animation: slide 1s backwards;
 }
 
@@ -107,8 +106,8 @@
 }
 
 .main-class p {
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-bottom: 60px;
   line-height: 1.9rem;
 }
 
@@ -122,7 +121,6 @@
   transition: 0.5s;
   color: #0c0b0b;
   border-radius: 5px;
-  float: right;
 }
 
 .main-class a:hover {
