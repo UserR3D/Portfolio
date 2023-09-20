@@ -1,21 +1,35 @@
 const place = document.querySelectorAll(".placeholder");
 const li = document.querySelectorAll(".header a");
 
-function handleClick(event) {
-  event.currentTarget.classList.toggle("active");
-  event.currentTarget.classList.remove("detail");
+function activeClass(active) {
+  active.classList.toggle("active");
+  active.classList.toggle("detail");
+  console.log();
+  if (active.classList.contains("active")) {
+    active.style.bottom = `${active.offsetHeight - 90}px`;
+  } else {
+    active.style.bottom = `-40px`;
+  }
+}
+
+function handleDetail(action) {
+  action.classList.toggle("detail");
 }
 
 function clickButton(event) {
   event.preventDefault();
   switch (event.currentTarget.innerHTML) {
     case "Skills":
-      document.querySelector(".skills").classList.toggle("detail");
-      document.querySelector(".skills").classList.toggle("active");
+      activeClass(document.querySelector(".skills"));
       break;
     case "Laboratório":
-      document.querySelector(".lab").classList.toggle("detail");
-      document.querySelector(".lab").classList.toggle("active");
+      activeClass(document.querySelector(".lab"));
+      break;
+    case "Sobre":
+      handleDetail(document.querySelector(".main-class"));
+      break;
+    case "Contato":
+      handleDetail(document.querySelector(".contato"));
   }
 }
 
@@ -24,5 +38,7 @@ li.forEach((item) => {
 });
 
 place.forEach((item) => {
-  item.addEventListener("click", handleClick);
+  item.addEventListener("click", (event) => {
+    activeClass(event.currentTarget);
+  });
 });

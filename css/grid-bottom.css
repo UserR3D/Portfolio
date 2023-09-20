@@ -1,18 +1,16 @@
 .grid-bottom {
-  display: grid;
-  grid-template-columns: 600px 600px;
-  gap: 120px;
+  display: flex;
   position: relative;
 }
 
 .placeholder {
+  position: relative;
   background-color: #302633;
   padding: 50px;
-  position: relative;
+  border-radius: 10px;
   filter: blur(2px);
   bottom: -40px;
-  transition: 0.4s;
-  border-radius: 10px;
+  transition: bottom, 0.4s;
 }
 
 .placeholder h2 {
@@ -23,10 +21,6 @@
 .placeholder:hover {
   filter: blur(0);
   bottom: 8px;
-}
-
-.placeholder.active {
-  bottom: 250px;
 }
 
 .skills h2 {
@@ -42,8 +36,10 @@
 
 .skills ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 40px;
 }
 
 .lab {
