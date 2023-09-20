@@ -98,7 +98,9 @@
   margin-top: 50px;
   color: #e8f3ff;
   background-color: #3c2244;
+  border-radius: 5px;
   padding: 5px 20px;
+  font-family: "Dm sans", sans-serif;
 }
 
 .box a:focus {

@@ -22,10 +22,8 @@
   opacity: 0;
   width: 100%;
   height: 100%;
-  border: 20px solid rgb(187, 56, 39);
+  border: 20px solid #bb3827;
   border-radius: 15px;
-  z-index: -1;
-  transition: 0.4s;
 }
 
 .main-class.detail::before {
