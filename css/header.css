@@ -22,9 +22,9 @@
   width: 0%;
   height: 4px;
   background-color: #fff;
+  transition: width, 0.3s;
 }
 
 .header li:hover::after {
   width: 100%;
-  transition: width, 0.3s;
 }

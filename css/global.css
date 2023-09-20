@@ -1,5 +1,7 @@
 body {
   background-color: #0a0809;
+  overflow: hidden;
+  position: relative;
 }
 
 body,

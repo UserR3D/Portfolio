@@ -1,31 +1,84 @@
 .main-class {
-  margin-top: 100px;
-  max-width: 900px;
-  border-radius: 15px;
+  position: relative;
+  display: flex;
+  font-family: "Dm sans", sans-serif;
   background-color: #352732;
   color: #caddf2;
-  padding: 70px;
+  box-shadow: -60px 60px 0 #2e1111;
+  padding: 80px;
+  gap: 100px;
+  border-radius: 15px;
   font-size: 20px;
-  font-family: "Dm sans", sans-serif;
+  z-index: 0;
+}
+
+.main-class::before {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border: 20px solid rgb(187, 56, 39);
+  border-radius: 15px;
+  z-index: -1;
+  transition: 0.4s;
+}
+
+.main-class.detail::before {
+  opacity: 1;
+}
+
+.developer {
+  width: 350px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  margin-top: 10px;
+  position: absolute;
+  left: 0;
+  background: #c2adbe;
+  width: 150px;
+  height: 4px;
+  animation: anima 3s linear infinite;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  right: 380px;
+  background: #c2adbe;
+  width: 150px;
+  height: 4px;
+}
+
+@keyframes anima {
+  from {
+    left: 0;
+  }
+  to {
+    left: 380px;
+  }
+}
+
+.developer h3 span {
+  color: #2182dd;
 }
 
 .main-class h1 {
   margin-top: 24px;
 }
 
-.main-class h4::before {
-  content: "</ ";
-  color: #0f64e2;
-}
-
-.main-class h4::after {
-  content: " >";
-  color: #0f64e2;
-}
-
 .main-class p {
   margin-top: 30px;
   margin-bottom: 50px;
+  line-height: 1.9rem;
 }
 
 .main-class a {
@@ -52,6 +105,7 @@
 }
 
 .contato {
+  position: relative;
   margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
@@ -60,6 +114,23 @@
   background-color: #191414;
   width: 120px;
   height: 700px;
+}
+
+.contato::before {
+  content: "";
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background-color: green;
+  display: block;
+  transition: 0.8s;
+}
+
+.contato.detail::before {
+  opacity: 1;
+  height: 30%;
 }
 
 .contato h3 {
@@ -78,5 +149,5 @@
 .rede-sociais img {
   width: 50px;
   height: 50px;
-  margin: 0 auto;
+  margin: 00%o;
 }

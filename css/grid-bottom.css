@@ -1,0 +1,92 @@
+.grid-bottom {
+  display: flex;
+  position: relative;
+}
+
+.placeholder {
+  position: relative;
+  background-color: #302633;
+  padding: 50px;
+  border-radius: 10px;
+  filter: blur(2px);
+  bottom: -40px;
+  transition: bottom, 0.4s;
+}
+
+.placeholder h2 {
+  color: #fff;
+  font-family: "Dm sans", sans-serif;
+}
+
+.placeholder:hover {
+  filter: blur(0);
+  bottom: 8px;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.skills img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.lab {
+  text-align: center;
+}
+
+.lab ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.box {
+  margin-top: 40px;
+  background-color: #1d1817;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.box p {
+  color: #caddf2;
+}
+
+.box h3 {
+  margin-bottom: 8px;
+  color: #e8f3ff;
+}
+
+.box ul {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.box li {
+  border: 2px solid #41dd87;
+  padding: 5px;
+}
+
+.box a {
+  margin-top: 20px;
+  color: #e8f3ff;
+  background-color: #3c2244;
+  padding: 5px 20px;
+}
+
+.box a:focus {
+  display: none;
+}
