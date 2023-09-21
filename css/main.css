@@ -115,7 +115,7 @@
   font-size: 24px;
   font-weight: 500;
   font-family: "Dm mono", sans-serif;
-  padding: 15px 70px;
+  padding: 15px 40px;
   background-color: #99b4d3;
   border: 8px ridge #1ed689;
   transition: 0.5s;
@@ -141,12 +141,12 @@
 
 .contato {
   position: relative;
-  margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   background-color: #191414;
+  margin-top: 40px;
   width: 120px;
   height: 700px;
 }
@@ -185,4 +185,56 @@
   width: 50px;
   height: 50px;
   margin: 00%o;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+  .main-class {
+    padding: 50px;
+    margin-top: 120px;
+    box-shadow: none;
+  }
+  .contato {
+    margin-top: 0;
+    flex-direction: row;
+    padding: 20px;
+    gap: 30px;
+    width: auto;
+    height: auto;
+  }
+  .contato h3 {
+    font-size: 2rem;
+    transform: rotate(0deg);
+  }
+  .contato ul {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    gap: 16px;
+  }
+  .main-class {
+    margin-top: 60px;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 10px;
+  }
+  .main-class img {
+    display: none;
+  }
+  .developer {
+    width: 300px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .about a {
+    padding: 10px;
+  }
 }

@@ -1,18 +1,21 @@
 .grid-bottom {
   display: flex;
+  align-items: center;
   justify-content: center;
   position: relative;
 }
 
 .placeholder {
-  max-height: 600px;
+  box-sizing: border-box;
+  overflow-y: auto;
   position: relative;
   background-color: #302633;
   padding: 50px;
   border-radius: 10px;
   filter: blur(2px);
-  bottom: -40px;
+  bottom: 0px;
   transition: bottom, 0.4s;
+  max-height: 800px;
 }
 
 .placeholder h2 {
@@ -41,16 +44,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .lab {
   text-align: center;
-  overflow-y: auto;
 }
 
 .lab ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -61,7 +64,6 @@
   border: 6px double #fff;
   border-radius: 8px;
   padding: 20px 15px;
-  width: 30ch;
   max-width: 270px;
   max-height: 200px;
 }
@@ -80,7 +82,7 @@
 .box ul {
   margin: 20px 0;
   display: flex;
-  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .box li {
@@ -105,4 +107,29 @@
 
 .box a:focus {
   display: none;
+}
+
+@media (max-width: 1024px) {
+  .placeholder {
+    max-height: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .placeholder {
+    filter: blur(0);
+  }
+  .placeholder h2 {
+    font-size: 1rem;
+  }
+  .box {
+    width: auto;
+    max-height: 100%;
+  }
+  .box ul {
+    flex-wrap: wrap;
+  }
+  .placeholder img {
+    max-width: 180px;
+  }
 }
