@@ -9,7 +9,7 @@ const x = {
 };
 let y = 90;
 
-function media(x) {
+function media() {
   if (x.breakPointLarge.matches) {
     y = 400;
   }
@@ -19,7 +19,7 @@ function media(x) {
 }
 
 window.addEventListener("resize", media);
-media(x);
+media();
 
 function activeClass(active) {
   console.log(window.innerHeight);
