@@ -13,19 +13,19 @@
 }
 
 .main-class::before {
-  box-sizing: border-box;
   content: "";
+  display: block;
+  box-sizing: border-box;
   position: absolute;
+  transition: 0.5s;
+  opacity: 0;
   top: 0;
   left: 0;
-  display: block;
-  opacity: 0;
   width: 100%;
   height: 100%;
-  border: 20px solid rgb(187, 56, 39);
+  border: 20px solid #bb3827;
   border-radius: 15px;
   z-index: -1;
-  transition: 0.4s;
 }
 
 .main-class.detail::before {
@@ -72,18 +72,15 @@
 }
 
 .name {
-  width: 200px;
+  margin-top: 15px;
+  width: 300px;
 }
 
-.main-class .name {
-  margin-top: 24px;
-}
-
-.main-class .name.detail {
+.name.detail {
   font-weight: bold;
 }
 
-.main-class .name::after {
+.name::after {
   margin-top: 10px;
   content: "";
   display: block;
@@ -92,7 +89,7 @@
   background-color: #af3036;
 }
 
-.main-class .name.detail::after {
+.name.detail::after {
   animation: slide 1s backwards;
 }
 
@@ -109,8 +106,8 @@
 }
 
 .main-class p {
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-bottom: 60px;
   line-height: 1.9rem;
 }
 
@@ -118,13 +115,12 @@
   font-size: 24px;
   font-weight: 500;
   font-family: "Dm mono", sans-serif;
-  padding: 15px 70px;
+  padding: 15px 40px;
   background-color: #99b4d3;
   border: 8px ridge #1ed689;
   transition: 0.5s;
   color: #0c0b0b;
   border-radius: 5px;
-  float: right;
 }
 
 .main-class a:hover {
@@ -145,12 +141,12 @@
 
 .contato {
   position: relative;
-  margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   background-color: #191414;
+  margin-top: 40px;
   width: 120px;
   height: 700px;
 }
@@ -189,4 +185,56 @@
   width: 50px;
   height: 50px;
   margin: 00%o;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+  .main-class {
+    padding: 50px;
+    margin-top: 120px;
+    box-shadow: none;
+  }
+  .contato {
+    margin-top: 0;
+    flex-direction: row;
+    padding: 20px;
+    gap: 30px;
+    width: auto;
+    height: auto;
+  }
+  .contato h3 {
+    font-size: 2rem;
+    transform: rotate(0deg);
+  }
+  .contato ul {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    gap: 16px;
+  }
+  .main-class {
+    margin-top: 60px;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 10px;
+  }
+  .main-class img {
+    display: none;
+  }
+  .developer {
+    width: 300px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .about a {
+    padding: 10px;
+  }
 }

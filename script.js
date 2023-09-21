@@ -1,12 +1,32 @@
 const place = document.querySelectorAll(".placeholder");
 const li = document.querySelectorAll(".header a");
+const mobileLi = document.querySelectorAll(".mobile-ul li");
+const button = document.querySelector(".header-mobile button");
+const gridBottom = document.querySelector(".grid-bottom");
+const x = {
+  breakPointLarge: window.matchMedia("(max-width: 1024px)"),
+  breakPointMedium: window.matchMedia("(max-width: 768px)"),
+};
+let y = 90;
+
+function media(x) {
+  if (x.breakPointLarge.matches) {
+    y = 400;
+  }
+  if (x.breakPointMedium.matches) {
+    y = 300;
+  }
+}
+
+window.addEventListener("resize", media);
+media(x);
 
 function activeClass(active) {
+  console.log(window.innerHeight);
   active.classList.toggle("active");
   active.classList.toggle("detail");
-  console.log();
   if (active.classList.contains("active")) {
-    active.style.bottom = `${active.offsetHeight - 90}px`;
+    active.style.bottom = `${active.offsetHeight - y}px`;
   } else {
     active.style.bottom = `-40px`;
   }
@@ -18,7 +38,7 @@ function handleDetail(action) {
 
 function clickButton(event) {
   event.preventDefault();
-  switch (event.currentTarget.innerHTML) {
+  switch (event.currentTarget.innerText) {
     case "Skills":
       activeClass(document.querySelector(".skills"));
       break;
@@ -42,4 +62,12 @@ place.forEach((item) => {
   item.addEventListener("click", (event) => {
     activeClass(event.currentTarget);
   });
+});
+
+button.addEventListener("click", () => {
+  handleDetail(document.querySelector(".mobile-ul"));
+});
+
+mobileLi.forEach((item) => {
+  item.addEventListener("click", clickButton);
 });
