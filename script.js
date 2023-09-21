@@ -7,7 +7,7 @@ const x = {
   breakPointLarge: window.matchMedia("(max-width: 1024px)"),
   breakPointMedium: window.matchMedia("(max-width: 768px)"),
 };
-let y = 90;
+let y;
 
 function media() {
   if (x.breakPointLarge.matches) {
@@ -15,6 +15,8 @@ function media() {
   }
   if (x.breakPointMedium.matches) {
     y = 300;
+  } else {
+    y = 90;
   }
 }
 
@@ -22,7 +24,6 @@ window.addEventListener("resize", media);
 media();
 
 function activeClass(active) {
-  console.log(window.innerHeight);
   active.classList.toggle("active");
   active.classList.toggle("detail");
   if (active.classList.contains("active")) {
