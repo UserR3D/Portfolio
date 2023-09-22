@@ -7,29 +7,17 @@ const x = {
   breakPointLarge: window.matchMedia("(max-width: 1024px)"),
   breakPointMedium: window.matchMedia("(max-width: 768px)"),
 };
-let y;
-
-function media() {
-  if (x.breakPointLarge.matches) {
-    y = 400;
-  }
-  if (x.breakPointMedium.matches) {
-    y = 300;
-  } else {
-    y = 90;
-  }
-}
-
-window.addEventListener("resize", media);
-media();
 
 function activeClass(active) {
-  active.classList.toggle("active");
-  active.classList.toggle("detail");
-  if (active.classList.contains("active")) {
-    active.style.bottom = `${active.offsetHeight - y}px`;
+  if (x.breakPointLarge.matches) {
+    return false;
   } else {
-    active.style.bottom = `-40px`;
+    active.classList.toggle("active");
+    if (active.classList.contains("active")) {
+      active.style.bottom = `${active.offsetHeight - 100}px`;
+    } else {
+      active.style.bottom = `0px`;
+    }
   }
 }
 
@@ -52,8 +40,35 @@ function clickButton(event) {
       break;
     case "Contato":
       handleDetail(document.querySelector(".contato"));
+      break;
   }
 }
+
+function scrollSmooth(div) {
+  div.scrollIntoView({ behavior: "smooth" });
+}
+
+function media() {
+  if (window.innerWidth > 1024) {
+    window.scrollTo(0, 0);
+  }
+  if (x.breakPointLarge.matches) {
+    mobileLi.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        switch (event.currentTarget.innerText) {
+          case "Skills":
+            scrollSmooth(document.querySelector(".skills"));
+            break;
+          case "Laboratório":
+            scrollSmooth(document.querySelector(".lab"));
+            break;
+        }
+      });
+    });
+  }
+}
+window.addEventListener("resize", media);
+media();
 
 li.forEach((item) => {
   item.addEventListener("click", clickButton);
