@@ -16,6 +16,10 @@
   max-height: 100%;
 }
 
+.placeholder.active {
+  filter: blur(0);
+}
+
 .placeholder h2 {
   color: #fff;
   font-family: "Dm sans", sans-serif;

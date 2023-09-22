@@ -117,11 +117,10 @@
   font-size: 24px;
   font-weight: 500;
   transition: 0.5s;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 15px 40px;
   font-family: "Dm mono", sans-serif;
-  background-color: #1caa68;
-  border: 8px solid #1caa68;
+  background-color: #16eb87;
   color: #0c0b0b;
 }
 
