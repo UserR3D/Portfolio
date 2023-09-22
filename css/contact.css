@@ -51,3 +51,12 @@
     flex-direction: row;
   }
 }
+
+@media (max-width: 768px) {
+  .contato {
+    gap: 20px;
+  }
+  .contato h3 {
+    font-size: 1.3rem;
+  }
+}

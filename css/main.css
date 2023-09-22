@@ -39,13 +39,17 @@
   overflow: hidden;
 }
 
+.slider,
+.slider::after {
+  background: #c2adbe;
+  width: 50px;
+  height: 4px;
+}
+
 .slider {
   margin-top: 10px;
   position: absolute;
   left: 0;
-  background: #c2adbe;
-  width: 150px;
-  height: 4px;
   animation: anima 3s linear infinite;
 }
 
@@ -53,9 +57,6 @@
   content: "";
   position: absolute;
   right: 380px;
-  background: #c2adbe;
-  width: 150px;
-  height: 4px;
 }
 
 @keyframes anima {
@@ -68,16 +69,17 @@
 }
 
 .developer h3 span {
-  color: #2182dd;
+  color: #1caa68;
 }
 
 .name {
-  margin-top: 15px;
-  width: 300px;
+  position: relative;
+  width: 210px;
 }
 
-.name.detail {
-  font-weight: bold;
+.name h1 {
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .name::after {
@@ -111,20 +113,20 @@
   line-height: 1.9rem;
 }
 
-.main-class a {
+.about a {
   font-size: 24px;
   font-weight: 500;
-  font-family: "Dm mono", sans-serif;
-  padding: 15px 40px;
-  background-color: #99b4d3;
-  border: 8px ridge #1ed689;
   transition: 0.5s;
-  color: #0c0b0b;
   border-radius: 5px;
+  padding: 15px 40px;
+  font-family: "Dm mono", sans-serif;
+  background-color: #1caa68;
+  border: 8px solid #1caa68;
+  color: #0c0b0b;
 }
 
-.main-class a:hover {
-  background-color: #55afca;
+.about a:hover {
+  background-color: #89e9bc;
 }
 
 .main-class img {
@@ -173,6 +175,9 @@
     gap: 40px;
     padding: 40px 10px;
   }
+  .main-class::before {
+    border: 5px solid #bb3827;
+  }
   .main-class img {
     display: none;
   }
@@ -180,6 +185,10 @@
     width: 300px;
     height: 40px;
     font-size: 1rem;
+  }
+  .about a {
+    font-size: 1.4rem;
+    padding: 1rem;
   }
 }
 

@@ -9,6 +9,30 @@
   font-weight: 500;
 }
 
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header li {
+  position: relative;
+}
+
+.header li::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 4px;
+  background-color: #fff;
+  transition: width, 0.3s;
+}
+
+.header li:hover::after {
+  width: 100%;
+}
+
 .header-mobile {
   font-family: "Ubuntu", "DM Sans", sans-serif;
   position: absolute;
@@ -72,27 +96,6 @@
 
 .mobile-ul.detail li:hover::after {
   width: 10px;
-}
-
-.header ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 50px;
-}
-
-.header li::after {
-  content: "";
-  margin-top: 4px;
-  display: block;
-  width: 0%;
-  height: 4px;
-  background-color: #fff;
-  transition: width, 0.3s;
-}
-
-.header li:hover::after {
-  width: 100%;
 }
 
 @media (max-width: 1024px) {

@@ -44,10 +44,6 @@ function clickButton(event) {
   }
 }
 
-function scrollSmooth(div) {
-  div.scrollIntoView({ behavior: "smooth" });
-}
-
 function media() {
   if (window.innerWidth > 1024) {
     window.scrollTo(0, 0);
@@ -57,13 +53,21 @@ function media() {
       item.addEventListener("click", (event) => {
         switch (event.currentTarget.innerText) {
           case "Skills":
-            scrollSmooth(document.querySelector(".skills"));
+            document
+              .querySelector(".skills")
+              .scrollIntoView({ behavior: "smooth" });
             break;
           case "Laboratório":
-            scrollSmooth(document.querySelector(".lab"));
+            document
+              .querySelector(".lab")
+              .scrollIntoView({ behavior: "smooth" });
             break;
         }
       });
+    });
+    place.forEach((item) => {
+      item.classList.remove("active");
+      item.style.bottom = `0px`;
     });
   }
 }
