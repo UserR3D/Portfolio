@@ -1,8 +1,5 @@
 const place = document.querySelectorAll(".placeholder");
-const li = document.querySelectorAll(".header a");
 const mobileLi = document.querySelectorAll(".mobile-ul li");
-const button = document.querySelector(".header-mobile button");
-const gridBottom = document.querySelector(".grid-bottom");
 const x = {
   breakPointLarge: window.matchMedia("(max-width: 1024px)"),
   breakPointMedium: window.matchMedia("(max-width: 768px)"),
@@ -74,7 +71,7 @@ function media() {
 window.addEventListener("resize", media);
 media();
 
-li.forEach((item) => {
+document.querySelectorAll(".header a").forEach((item) => {
   item.addEventListener("click", clickButton);
 });
 
@@ -84,10 +81,12 @@ place.forEach((item) => {
   });
 });
 
-button.addEventListener("click", () => {
-  handleDetail(document.querySelector(".mobile-ul"));
-});
+document
+  .querySelector(".header-mobile button")
+  .addEventListener("click", () => {
+    handleDetail(document.querySelector(".mobile-ul"));
+  });
 
-mobileLi.forEach((item) => {
+document.querySelectorAll(".mobile-ul li").forEach((item) => {
   item.addEventListener("click", clickButton);
 });
